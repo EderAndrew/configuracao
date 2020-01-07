@@ -4,6 +4,10 @@ import styled from 'styled-components/native'
 //Importando o componente Button
 import ButtonDefault from '../components/ButtonDefault'
 
+const Header = styled.View`
+    width:100%;
+    padding:10px;
+`
 const Component  = styled.SafeAreaView`
     flex:1;
     margin-top:30px;
@@ -83,6 +87,9 @@ const FinancialData = (props) => {
     //width='40' marginRight='30' width='40' marginLeft='30'
     return(
         <ImageBackground source={require('../img/bg.jpg')}>
+            <Header>
+                <Text>Olá, {props.navigation.state.params.nome}</Text>
+            </Header>
             <Component>
                 <Text>Qual é o seu Salário?</Text>
                 <Slider value={salario} minimumValue={450} maximumValue={3000} onValueChange={(v)=>setSalario(v)} />

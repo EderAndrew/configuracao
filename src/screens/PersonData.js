@@ -54,6 +54,8 @@ const CaixaDoador = styled.View`
 //Utilização do useState no lugar do this.state Código mais verboso
 const PersonData = (props) => {
     let a = [{value:'Masculino'},{value:'Feminino'}]
+    //Aqui ficam todos os STATES
+    const [nome, setNome] = useState('')
     const [sexo, setSexo] = useState(a)
     const [value, setValue] = useState(0)
 
@@ -67,14 +69,16 @@ const PersonData = (props) => {
     })
 
     const proximaTela = () => {
-        props.navigation.navigate('FinancialData')
+        props.navigation.navigate('FinancialData', {
+            nome
+        })
     }
     return(
         <Container>
             <ImageBackground source={require('../img/bg.jpg')}>
                 <Body>
                     <Text>Digite o seu Nome</Text>
-                    <Input placeholder='Name'/>
+                    <Input placeholder='Name' onChangeText={n=>setNome(n)}/>
 
                     <Text>Data de Nascimento</Text>
                     <NascimentoPicker />
