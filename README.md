@@ -22,8 +22,9 @@ Banco - Picker
 Quantidade de cartões - Button com uma lógica de adicionar e remover o numero de cartões
 
 Realizando a configuração do aplicativo com StackNavigator
-
-App - createAppContainer
- -Index - stackNavigator
-  --Dados pessoais - screen
-  --Dados Financeiros - screen
+<ul>
+    <li>App - createAppContainer</li>
+    <li>-Index - stackNavigator</li>
+    <li>--Dados pessoais - screen</li>
+    <li>--Dados Financeiros - screen</li>
+</ul>
