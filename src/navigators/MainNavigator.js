@@ -8,11 +8,13 @@ import { createStackNavigator } from 'react-navigation-stack'
 //Inportando as telas para serem renderizadas
 import Index from '../screens/Index'
 import PersonData from '../screens/PersonData'
+import FinancialData from '../screens/FinancialData'
 
 const MainNavigator = createStackNavigator({
     //renderizando todas as telas 
     Index, 
-    PersonData
+    PersonData,
+    FinancialData
 })
 
 //Para desabilitar as yellow box warning

@@ -16,6 +16,8 @@ const Container = styled.TouchableHighlight`
     align-items:center;
     margin-top:${props=>props.margin};
     background-color:#6A68FF;
+    margin-right:${props=>props.marginRight || 'auto'};
+    margin-left:${props=>props.marginLeft || 'auto'};
 `
 const Title = styled.Text`
     font-size:18px;

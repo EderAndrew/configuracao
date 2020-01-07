@@ -52,7 +52,7 @@ const CaixaDoador = styled.View`
 `
 //Utilizando um ImageBackground encapsulando todo o conteúdo da tela
 //Utilização do useState no lugar do this.state Código mais verboso
-const PersonData = () => {
+const PersonData = (props) => {
     let a = [{value:'Masculino'},{value:'Feminino'}]
     const [sexo, setSexo] = useState(a)
     const [value, setValue] = useState(0)
@@ -65,6 +65,10 @@ const PersonData = () => {
     let s = a.map((v, k) => {
         return <Picker.Item key={k} value={k} label={v.value}/>
     })
+
+    const proximaTela = () => {
+        props.navigation.navigate('FinancialData')
+    }
     return(
         <Container>
             <ImageBackground source={require('../img/bg.jpg')}>
@@ -94,7 +98,7 @@ const PersonData = () => {
                         <Text>{(doar)?'Sim':'Não'}</Text>
                     </CaixaDoador>
                     
-                    <ButtonDefault title='Próximo passo' margin='40' onPress={null} />
+                    <ButtonDefault title='Próximo passo' margin='40' onPress={proximaTela} />
                 </Body>    
             </ImageBackground>
         </Container>
